@@ -2,7 +2,7 @@
 Created on 23/4/2020
 
 ### Project Title
-Replace the Project Title
+My first Project on Git!
 
 ### Description
 Describe what your project is about and what it does
