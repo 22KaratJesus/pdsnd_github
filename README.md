@@ -5,7 +5,7 @@ Created on 23/4/2020
 My first Project on Git!
 
 ### Description
-Describe what your project is about and what it does
+This project shows what **i** have learned with Udacity and that **i** can work with Git and Github!
 
 ### Files used
 Include the files used
