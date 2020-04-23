@@ -126,8 +126,8 @@ def station_stats(df):
 
 
     # TO DO: display most frequent combination of start station and end station trip
-    popular_route = df.groupby(['Start Station','End Station']).size().nlargest(1)
-    print('Most frequent Route:\n', popular_route)
+    frequent_route = df.groupby(['Start Station','End Station']).size().nlargest(1)
+    print('Most frequent Route:\n', frequent_route)
 
 
 
@@ -175,10 +175,10 @@ def user_stats(df):
         birth_year = df['Birth Year']
         earliest_year = df['Birth Year'].min()
         latest_year = df['Birth Year'].max()
-        popular_year = birth_year.mode()[0]
+        common_year = birth_year.mode()[0]
         print('Earliest birth year: ', earliest_year)
         print('Most recent birth year: ', latest_year)
-        print('Most common birth year', popular_year)
+        print('Most common birth year', common_year)
     else:
         print('\nNo Data for Birth Year available for the chosen City')
 
@@ -186,7 +186,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def display_data(df):
+def raw_data(df):
     """Displays 5 rows of raw data on request."""
 
     lower_bound = 0
@@ -209,7 +209,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        display_data(df)
+        raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
